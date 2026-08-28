@@ -10,6 +10,8 @@ function App() {
   const [startTime, setStartTime] = useState(null)
   const [elapsedTime, setElapsedTime] = useState(0)
 
+  const base = import.meta.env.BASE_URL
+
   const [records, setRecords] = useState(() => {
     const savedRecords =
       localStorage.getItem('quizRecords')
@@ -54,22 +56,22 @@ function App() {
   title: '神戸大学をすべて選択してください',
 
   images: [
-    '/image/01_kobeuniv/01.jpg',
-    '/image/01_kobeuniv/02.jpg',
-    '/image/01_kobeuniv/03.jpg',
-    '/image/01_kobeuniv/04.jpg',
-    '/image/01_kobeuniv/05.jpg',
-    '/image/01_kobeuniv/06.jpg',
-    '/image/01_kobeuniv/07.jpg',
-    '/image/01_kobeuniv/08.jpg',
-    '/image/01_kobeuniv/09.jpg'
+    '${base}image/01_kobeuniv/01.jpg',
+    '${base}image/01_kobeuniv/02.jpg',
+    '${base}image/01_kobeuniv/03.jpg',
+    '${base}image/01_kobeuniv/04.jpg',
+    '${base}image/01_kobeuniv/05.jpg',
+    '${base}image/01_kobeuniv/06.jpg',
+    '${base}image/01_kobeuniv/07.jpg',
+    '${base}image/01_kobeuniv/08.jpg',
+    '${base}image/01_kobeuniv/09.jpg'
   ],
 
   correctAnswers: [
-    '/image/01_kobeuniv/01.jpg',
-    '/image/01_kobeuniv/04.jpg',
-    '/image/01_kobeuniv/08.jpg',
-    '/image/01_kobeuniv/09.jpg'
+    '${base}image/01_kobeuniv/01.jpg',
+    '${base}image/01_kobeuniv/04.jpg',
+    '${base}image/01_kobeuniv/08.jpg',
+    '${base}image/01_kobeuniv/09.jpg'
   ]
   }
   const question2 = {
@@ -77,22 +79,22 @@ function App() {
   title: '2022年度実施の高等学校学習指導要領で定められている科目をすべて選択してください',
 
   images: [
-    '/image/02_curriculum/01.JPG',
-    '/image/02_curriculum/02.JPG',
-    '/image/02_curriculum/03.JPG',
-    '/image/02_curriculum/04.JPG',
-    '/image/02_curriculum/05.JPG',
-    '/image/02_curriculum/06.JPG',
-    '/image/02_curriculum/07.JPG',
-    '/image/02_curriculum/08.JPG',
-    '/image/02_curriculum/09.JPG'
+    '${base}image/02_curriculum/01.JPG',
+    '${base}image/02_curriculum/02.JPG',
+    '${base}image/02_curriculum/03.JPG',
+    '${base}image/02_curriculum/04.JPG',
+    '${base}image/02_curriculum/05.JPG',
+    '${base}image/02_curriculum/06.JPG',
+    '${base}image/02_curriculum/07.JPG',
+    '${base}image/02_curriculum/08.JPG',
+    '${base}image/02_curriculum/09.JPG'
   ],
 
   correctAnswers: [
-    '/image/02_curriculum/03.JPG',
-    '/image/02_curriculum/04.JPG',
-    '/image/02_curriculum/05.JPG',
-    '/image/02_curriculum/08.JPG'
+    '${base}image/02_curriculum/03.JPG',
+    '${base}image/02_curriculum/04.JPG',
+    '${base}image/02_curriculum/05.JPG',
+    '${base}image/02_curriculum/08.JPG'
   ]
   }
   const question3 = {
@@ -100,23 +102,23 @@ function App() {
   title: '紀元前の出来事とされているものをすべて選択してください',
 
   images: [
-    '/image/03_history/01.JPG',
-    '/image/03_history/02.JPG',
-    '/image/03_history/03.JPG',
-    '/image/03_history/04.JPG',
-    '/image/03_history/05.JPG',
-    '/image/03_history/06.JPG',
-    '/image/03_history/07.JPG',
-    '/image/03_history/08.JPG',
-    '/image/03_history/09.JPG'
+    '${base}image/03_history/01.JPG',
+    '${base}image/03_history/02.JPG',
+    '${base}image/03_history/03.JPG',
+    '${base}image/03_history/04.JPG',
+    '${base}image/03_history/05.JPG',
+    '${base}image/03_history/06.JPG',
+    '${base}image/03_history/07.JPG',
+    '${base}image/03_history/08.JPG',
+    '${base}image/03_history/09.JPG'
   ],
 
   correctAnswers: [
-    '/image/03_history/02.JPG',
-    '/image/03_history/03.JPG',
-    '/image/03_history/06.JPG',
-    '/image/03_history/07.JPG',
-    '/image/03_history/09.JPG'
+    '${base}image/03_history/02.JPG',
+    '${base}image/03_history/03.JPG',
+    '${base}image/03_history/06.JPG',
+    '${base}image/03_history/07.JPG',
+    '${base}image/03_history/09.JPG'
   ]
   }
 
@@ -125,23 +127,23 @@ function App() {
   title: '魚類をすべて選択してください',
 
   images: [
-    '/image/04_fish/01.JPG',
-    '/image/04_fish/02.JPG',
-    '/image/04_fish/03.JPG',
-    '/image/04_fish/04.JPG',
-    '/image/04_fish/05.JPG',
-    '/image/04_fish/06.JPG',
-    '/image/04_fish/07.JPG',
-    '/image/04_fish/08.JPG',
-    '/image/04_fish/09.JPG'
+    '${base}image/04_fish/01.JPG',
+    '${base}image/04_fish/02.JPG',
+    '${base}image/04_fish/03.JPG',
+    '${base}image/04_fish/04.JPG',
+    '${base}image/04_fish/05.JPG',
+    '${base}image/04_fish/06.JPG',
+    '${base}image/04_fish/07.JPG',
+    '${base}image/04_fish/08.JPG',
+    '${base}image/04_fish/09.JPG'
   ],
 
   correctAnswers: [
-    '/image/04_fish/02.JPG',
-    '/image/04_fish/03.JPG',
-    '/image/04_fish/04.JPG',
-    '/image/04_fish/07.JPG',
-    '/image/04_fish/09.JPG'
+    '${base}image/04_fish/02.JPG',
+    '${base}image/04_fish/03.JPG',
+    '${base}image/04_fish/04.JPG',
+    '${base}image/04_fish/07.JPG',
+    '${base}image/04_fish/09.JPG'
   ]
   }
 
@@ -150,21 +152,21 @@ function App() {
   title: 'ラグをすべて選択してください',
 
   images: [
-    '/image/05_watch/01.jpg',
-    '/image/05_watch/02.jpg',
-    '/image/05_watch/03.jpg',
-    '/image/05_watch/04.jpg',
-    '/image/05_watch/05.jpg',
-    '/image/05_watch/06.jpg',
-    '/image/05_watch/07.jpg',
-    '/image/05_watch/08.jpg',
-    '/image/05_watch/09.jpg'
+    '${base}image/05_watch/01.jpg',
+    '${base}image/05_watch/02.jpg',
+    '${base}image/05_watch/03.jpg',
+    '${base}image/05_watch/04.jpg',
+    '${base}image/05_watch/05.jpg',
+    '${base}image/05_watch/06.jpg',
+    '${base}image/05_watch/07.jpg',
+    '${base}image/05_watch/08.jpg',
+    '${base}image/05_watch/09.jpg'
   ],
 
   correctAnswers: [
-    '/image/05_watch/02.jpg',
-    '/image/05_watch/05.jpg',
-    '/image/05_watch/08.jpg'
+    '${base}image/05_watch/02.jpg',
+    '${base}image/05_watch/05.jpg',
+    '${base}image/05_watch/08.jpg'
   ]
   }
 
