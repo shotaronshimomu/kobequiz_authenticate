@@ -374,7 +374,7 @@ if (!authenticated) {
 
     <div className="password-screen">
 
-      <h1>神戸大学認証クイズ</h1>
+      <h1>クイズプレイヤー認証</h1>
 
       <p>パスワードを入力してください</p>
 
