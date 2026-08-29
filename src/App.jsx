@@ -218,6 +218,14 @@ function App() {
         date: new Date().toLocaleString()
       }
       ])
+
+      sendScore(
+        playerName,
+        currentQuestion.id,
+        attemptCount + 1,
+        time
+      )
+
       setPlayerStatus('認証成功')
       setCurrentScreen('correct')
 
@@ -227,6 +235,54 @@ function App() {
 
     }
   }
+
+  const sendScore = async (
+    name,
+    questionId,
+    attempts,
+    time
+  ) => {
+
+    const formUrl ='https://docs.google.com/forms/d/e/1FAIpQLSefAaLKn4_-mug8GIEJQuuz8dJdmJ3Bl8_tyQu10ez4i4vOrQ/formResponse'
+
+    const formData = new FormData()
+
+    formData.append(
+    'entry.2018360629',
+    name
+    )
+
+    formData.append(
+    'entry.2048509477',
+    questionId
+    )
+
+    formData.append(
+    'entry.237545962',
+    attempts
+    )
+
+    formData.append(
+    'entry.1577961310',
+    time.toFixed(1)
+    )
+
+    try {
+
+      await fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      })
+
+      alert('送信しました')
+
+    } catch (error) {
+
+      alert('送信に失敗しました')
+
+    }
+    }
 
   const sortedRecords = [...records].sort(
   (a, b) => a.time - b.time
@@ -412,7 +468,7 @@ const monitorInfo = {
       解答時間: {elapsedTime.toFixed(1)} 秒
     </p>
 
-    <p>画面をタップして入室</p>
+    <p>画面をタップしてトップページへ</p>
   </div>
 )}
 
@@ -429,7 +485,7 @@ const monitorInfo = {
 
     <p>あなたはまだクイズプレイヤーではないようです</p>
 
-    <p>不屈の心を込めて画面をタップ</p>
+    <p>不屈の心で画面をタップ</p>
     </div>
     )}
 
