@@ -415,6 +415,7 @@ if (!authenticated) {
         <h1>クイズプレイヤー認証</h1>
         <br />
         <p>プレイヤー名</p>
+        <p>2回目以降のプレイ時は、1回目と同じプレイヤー名を入力してください</p>
         <br />
         <input
           type="text"
@@ -767,7 +768,7 @@ if (!authenticated) {
   )}
 
 <footer className="copyright">
-  © ShotaroSHIMOMURA
+  © shotaronSHIMOMU2026
 </footer>
 
 
