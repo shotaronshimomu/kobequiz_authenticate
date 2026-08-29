@@ -275,11 +275,11 @@ function App() {
         body: formData
       })
 
-      alert('送信しました')
+      alert('スコアを記録しました')
 
     } catch (error) {
 
-      alert('送信に失敗しました')
+      alert('スコアの記録に失敗しました')
 
     }
     }
@@ -399,7 +399,7 @@ const monitorInfo = {
         <button
           onClick={() => setCurrentScreen('adminHome')}
         >
-          管理画面
+        　ユーザーデータ
         </button>
       </>
     )}
@@ -540,7 +540,7 @@ const monitorInfo = {
 {currentScreen === 'adminHome' && (
   <div>
 
-    <h1>管理画面</h1>
+    <h1>ユーザーデータ</h1>
 
     <p>
       登録記録数: {records.length}件
@@ -560,7 +560,7 @@ const monitorInfo = {
       <button
         onClick={() => setCurrentScreen('adminRanking')}
       >
-        ランキング
+        成績
       </button>
 
       <br />
