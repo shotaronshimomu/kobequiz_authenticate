@@ -145,9 +145,8 @@ input {
 }
 
 .logo {
-  width: 120px;
+  width: min(40vw, 180px);
   height: auto;
-  margin-bottom: 12px;
 }
 
 .copyright {
