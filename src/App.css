@@ -143,3 +143,27 @@ input {
   display: flex;
   justify-content: center;
 }
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.copyright {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+}
+
+.password-screen {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+}

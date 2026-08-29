@@ -26,6 +26,20 @@ function App() {
   const [playerStatus, setPlayerStatus] =
   useState('待機中')
 
+  const [password, setPassword] = useState('')
+  const [authenticated, setAuthenticated] = useState(false)
+  const APP_PASSWORD = 'kq2026'
+
+  const login = () => {
+
+  if (password === APP_PASSWORD) {
+    setAuthenticated(true)
+  } else {
+    alert('パスワードが違います')
+  }
+
+  }
+
   useEffect(() => {
   localStorage.setItem(
     'quizRecords',
@@ -354,14 +368,54 @@ const monitorInfo = {
   lastAnswerTime: elapsedTime
 }
 
+if (!authenticated) {
+
+  return (
+
+    <div className="password-screen">
+
+      <h1>神戸大学認証クイズ</h1>
+
+      <p>パスワードを入力してください</p>
+
+      <input
+        type="password"
+        value={password}
+        onChange={(e) =>
+          setPassword(e.target.value)
+        }
+        onKeyDown={(e) => {
+
+        if (e.key === 'Enter') {
+        login()
+    }
+
+  }}
+/>
+
+      <button onClick={login}>
+        入室
+      </button>
+
+    </div>
+
+  )
+
+}
+
   return (
     <div>
     {currentScreen === 'start' && (
       <>
+      <img
+        src={`${import.meta.env.BASE_URL}logo.png`}
+        alt="ロゴ"
+        className
+        ></img>
         <h1>クイズプレイヤー認証</h1>
-
+        <br />
         <p>プレイヤー名</p>
-
+        <br />
         <input
           type="text"
           value={playerName}
@@ -399,7 +453,7 @@ const monitorInfo = {
         <button
           onClick={() => setCurrentScreen('adminHome')}
         >
-        　ユーザーデータ
+          ユーザーデータ
         </button>
       </>
     )}
@@ -443,7 +497,8 @@ const monitorInfo = {
 
       送信
       </button>
-
+      <br />
+      <br />
       </>
     )}
 
@@ -660,7 +715,8 @@ const monitorInfo = {
 
   {currentScreen === 'adminRanking' && (
     <div>
-
+<br />
+<br />
 <h2>ランキング</h2>
 
   <table>
@@ -687,6 +743,16 @@ const monitorInfo = {
   </tbody>
   </table>
 
+  <button
+    onClick={() => {
+    setRecords([])
+      localStorage.removeItem('quizRecords')
+    }}
+    >
+      成績を全削除
+  </button>
+
+  <br />
   <br />
 
   <button
@@ -696,9 +762,14 @@ const monitorInfo = {
   </button>
 
   <br />
-
+  <br />
   </div>
   )}
+
+<footer className="copyright">
+  © ShotaroSHIMOMURA
+</footer>
+
 
 </div>
   )
