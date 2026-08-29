@@ -410,7 +410,7 @@ if (!authenticated) {
       <img
         src={`${import.meta.env.BASE_URL}logo.png`}
         alt="ロゴ"
-        className
+        className="logo"
         ></img>
         <h1>クイズプレイヤー認証</h1>
         <br />
