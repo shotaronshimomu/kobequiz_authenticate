@@ -239,22 +239,22 @@ function App() {
   title: '神戸市をすべて選択してください',
 
   images: [
-    `${base}image/08_hyogo/1.JPG`,
-    `${base}image/08_hyogo/2.JPG`,
-    `${base}image/08_hyogo/3.JPG`,
-    `${base}image/08_hyogo/4.JPG`,
-    `${base}image/08_hyogo/5.JPG`,
-    `${base}image/08_hyogo/6.JPG`,
-    `${base}image/08_hyogo/7.JPG`,
-    `${base}image/08_hyogo/8.JPG`,
-    `${base}image/08_hyogo/9.JPG`
+    `${base}image/08_hyogo/1.jpg`,
+    `${base}image/08_hyogo/2.jpg`,
+    `${base}image/08_hyogo/3.jpg`,
+    `${base}image/08_hyogo/4.jpg`,
+    `${base}image/08_hyogo/5.jpg`,
+    `${base}image/08_hyogo/6.jpg`,
+    `${base}image/08_hyogo/7.jpg`,
+    `${base}image/08_hyogo/8.jpg`,
+    `${base}image/08_hyogo/9.jpg`
   ],
 
   correctAnswers: [
-    `${base}image/08_hyogo/5.JPG`,
-    `${base}image/08_hyogo/6.JPG`,
-    `${base}image/08_hyogo/8.JPG`,
-    `${base}image/08_hyogo/9.JPG`
+    `${base}image/08_hyogo/5.jpg`,
+    `${base}image/08_hyogo/6.jpg`,
+    `${base}image/08_hyogo/8.jpg`,
+    `${base}image/08_hyogo/9.jpg`
   ]
   }
 
@@ -355,7 +355,7 @@ function App() {
 
     formData.append(
     'entry.1577961310',
-    time.toFixed(1)
+    time.toFixed(2)
     )
 
     try {
@@ -598,7 +598,7 @@ if (!authenticated) {
     <p>記録件数: {records.length}</p>
 
     <p>
-      解答時間: {elapsedTime.toFixed(1)} 秒
+      解答時間: {elapsedTime.toFixed(2)} 秒
     </p>
 
     <p>画面をタップしてトップページへ</p>
@@ -643,7 +643,7 @@ if (!authenticated) {
         <td>{index + 1}位</td>
         <td>{record.name}</td>
         <td>{record.attempts}回</td>
-        <td>{record.time.toFixed(1)}秒</td>
+        <td>{record.time.toFixed(2)}秒</td>
         <td>{record.date}</td>
         </tr>
     ))}
@@ -736,7 +736,7 @@ if (!authenticated) {
     </p>
 
     <p>
-    最終解答時間:{monitorInfo.lastAnswerTime.toFixed(1)}秒
+    最終解答時間:{monitorInfo.lastAnswerTime.toFixed(2)}秒
     </p>
 
   </div>
@@ -814,7 +814,7 @@ if (!authenticated) {
       <td>{index + 1}位</td>
       <td>{record.name}</td>
       <td>{record.attempts}回</td>
-      <td>{record.time.toFixed(1)}秒</td>
+      <td>{record.time.toFixed(2)}秒</td>
       <td>{record.date}</td>
       </tr>
     ))}
