@@ -184,12 +184,89 @@ function App() {
   ]
   }
 
+  const question6 = {
+  id: 6,
+  title: '国立大学をすべて選択してください',
+
+  images: [
+    `${base}image/06_publicuniv/1.JPG`,
+    `${base}image/06_publicuniv/2.JPG`,
+    `${base}image/06_publicuniv/3.JPG`,
+    `${base}image/06_publicuniv/4.JPG`,
+    `${base}image/06_publicuniv/5.JPG`,
+    `${base}image/06_publicuniv/6.JPG`,
+    `${base}image/06_publicuniv/7.JPG`,
+    `${base}image/06_publicuniv/8.JPG`,
+    `${base}image/06_publicuniv/9.JPG`
+  ],
+
+  correctAnswers: [
+    `${base}image/06_publicuniv/2.JPG`,
+    `${base}image/06_publicuniv/3.JPG`,
+    `${base}image/06_publicuniv/4.JPG`,
+    `${base}image/06_publicuniv/5.JPG`,
+    `${base}image/06_publicuniv/7.JPG`
+  ]
+  }
+
+  const question7 = {
+  id: 7,
+  title: 'ほととぎすをすべて選択してください',
+
+  images: [
+    `${base}image/07_lessorcuckoo/1.JPG`,
+    `${base}image/07_lessorcuckoo/2.JPG`,
+    `${base}image/07_lessorcuckoo/3.JPG`,
+    `${base}image/07_lessorcuckoo/4.JPG`,
+    `${base}image/07_lessorcuckoo/5.JPG`,
+    `${base}image/07_lessorcuckoo/6.JPG`,
+    `${base}image/07_lessorcuckoo/7.JPG`,
+    `${base}image/07_lessorcuckoo/8.JPG`,
+    `${base}image/07_lessorcuckoo/9.JPG`
+  ],
+
+  correctAnswers: [
+    `${base}image/07_lessorcuckoo/1.JPG`,
+    `${base}image/07_lessorcuckoo/2.JPG`,
+    `${base}image/07_lessorcuckoo/6.JPG`,
+    `${base}image/07_lessorcuckoo/8.JPG`,
+    `${base}image/07_lessorcuckoo/9.JPG`
+  ]
+  }
+
+  const question8 = {
+  id: 8,
+  title: '神戸市をすべて選択してください',
+
+  images: [
+    `${base}image/08_hyogo/1.JPG`,
+    `${base}image/08_hyogo/2.JPG`,
+    `${base}image/08_hyogo/3.JPG`,
+    `${base}image/08_hyogo/4.JPG`,
+    `${base}image/08_hyogo/5.JPG`,
+    `${base}image/08_hyogo/6.JPG`,
+    `${base}image/08_hyogo/7.JPG`,
+    `${base}image/08_hyogo/8.JPG`,
+    `${base}image/08_hyogo/9.JPG`
+  ],
+
+  correctAnswers: [
+    `${base}image/08_hyogo/5.JPG`,
+    `${base}image/08_hyogo/6.JPG`,
+    `${base}image/08_hyogo/8.JPG`,
+    `${base}image/08_hyogo/9.JPG`
+  ]
+  }
+
   const questions = [
     question1,
     question2,
     question3,
     question4,
-    question5
+    question5,
+    question6,
+    question7,
+    question8
   ]
 
   const [currentQuestion, setCurrentQuestion] = useState(question1)
