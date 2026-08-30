@@ -258,6 +258,29 @@ function App() {
   ]
   }
 
+  const question9 = {
+  id: 9,
+  title: '芥川龍之介をすべて選択してください',
+
+  images: [
+    `${base}image/09_intro/1.JPG`,
+    `${base}image/09_intro/2.JPG`,
+    `${base}image/09_intro/3.JPG`,
+    `${base}image/09_intro/4.JPG`,
+    `${base}image/09_intro/5.JPG`,
+    `${base}image/09_intro/6.JPG`,
+    `${base}image/09_intro/7.JPG`,
+    `${base}image/09_intro/8.JPG`,
+    `${base}image/09_intro/9.JPG`
+  ],
+
+  correctAnswers: [
+    `${base}image/09_intro/2.JPG`,
+    `${base}image/09_intro/7.JPG`,
+    `${base}image/09_intro/8.JPG`
+  ]
+  }
+
   const questions = [
     question1,
     question2,
@@ -266,7 +289,8 @@ function App() {
     question5,
     question6,
     question7,
-    question8
+    question8,
+    question9
   ]
 
   const [currentQuestion, setCurrentQuestion] = useState(question1)
